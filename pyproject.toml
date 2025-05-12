@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "homegate"
+version = "0.1.0"
+description = ""
+authors = ["SvetlanaRomaniuk111 <gatskosv@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.13.4"
+python-telegram-bot = "^22.0"
+requests = "^2.32.3"
+psycopg2 = "^2.9.10"
+dotenv = "^0.9.9"
+python-dotenv = "^1.1.0"
+selenium = "^4.32.0"
+webdriver-manager = "^4.0.2"
+alembic = "^1.15.2"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+

@@ -1,0 +1,21 @@
+# version: "3.8"
+
+services:
+  db:
+    image: postgres:latest
+    container_name: homegate-db
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+
+  parser:
+    build: .
+    container_name: homegate-parser
+    depends_on:
+      - db
+    env_file:
+      - .env
+    restart: always
